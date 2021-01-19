@@ -1,0 +1,28 @@
+
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+ <div class="flex-container">
+    <div  *ngIf="show">
+    <div >
+   <div class="sidebar" *ngFor='let item of new; let i=index' >
+      <a  (click)="demo(item,i)" [ngClass]="{name:i==selectedindex}" href="#" routerLink="{{item.path}}">{{item.name}}</a>
+    <!-- <div *ngFor='let item of new.subPages; let i=index'>
+      <a *ngIf="item.length>0" (click)="demo(item,i)" [ngClass]="{name:i==selectedindex}" href="#" routerLink="{{item.path}}">{{item.name}}</a>
+    </div> -->
+    
+    </div>
+  </div>
+    
+    </div>
+    <div class ="columnright">
+    
+   
+    <i (click) ="drag();" class="fa fa-bars" ></i>
+    <router-outlet></router-outlet>
+    
+    
+    </div>
+    
+  </div>
+
+  
